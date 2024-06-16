@@ -37,6 +37,8 @@ The important parts of code are the `extends` within [nuxt.config.ts](./app/nuxt
 
 ### Closing thoughts
 
-- Generally, if you're reaching for layers because you want a consistent style, you should consider local layers + use a monorepo. 
-- If you're reaching for layers because you want loosely coupled components that are distributed between services, consider remote layers + a poly-repo approach
+- If you're reaching for layers because you want a consistent style, but still want teams to be able to contribute to their own sections independantly, you should consider local layers + use a monorepo
+  - Tools like [pnpm workspaces](https://pnpm.io/workspaces) can help a lot with managing monorepos
+  - You'll also want to consider incremental build tools like [turborepo](https://turbo.build/repo) because at a certain scale, you'll start to experience a slower DX feedback loop
+- If you're reaching for layers because you want loosely coupled components that are distributed between services, and don't need them to be deployed together (similar to a typical backend microservice architecture), consider remote layers + a poly-repo approach
   - You might also want to consider packages, but remote layers are likely much simpler
