@@ -14,9 +14,9 @@ Check out [./app](./app/) for the demo application, which uses both local and re
 
 This project demonstrates how you can use [Nuxt Layers](https://nuxt.com/docs/getting-started/layers), combined with [unjs/giget](https://github.com/unjs/giget) to create a version of micro-frontends. 
 
-Essentially, it pulls down all remote sources at compile time, then runs as a normal app. This is **not** the ideal goal, as remote sources being updated will require local sources to be re-built, but this gives the dependent layers a chance to review + detect breaking changes. 
+Essentially, it pulls down all remote sources at compile time, then runs as a normal app. Depending on your use case, this **may not be** the ideal goal, as remote sources being updated will require local sources to be re-built, but this gives the dependent layers a chance to review + detect breaking changes. Find out more below, in the pros + cons section
 
-The important parts are the `extends` within [nuxt.config.ts](./app/nuxt.config.ts), and the reference to the remote component 
+The important parts of code are the `extends` within [nuxt.config.ts](./app/nuxt.config.ts), and the reference to the remote component 
 
 ### Pros
 
