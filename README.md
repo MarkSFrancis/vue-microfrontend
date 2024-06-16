@@ -20,7 +20,7 @@ The important parts of code are the `extends` within [nuxt.config.ts](./app/nuxt
 
 ### Pros
 
-- Can organise by domains, employing DDD across multiple repositories, and deploy indepdendantly
+- Can organise by domains, employing DDD across multiple repositories, and deploy independantly
 - Teams can decide what components to make public for consumers, and what to keep private
 - Breaking changes are handled at compile time, not in production
 - Great DX. You'll still get type-safety, intellisense, and compilers checking your code's compatibility with the remote code
