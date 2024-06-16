@@ -34,3 +34,9 @@ The important parts are the `extends` within [nuxt.config.ts](./app/nuxt.config.
   - Something like `dependabot` is more common, but this will mean there's lag when shipping updates
 - No need to manage packages
 - Layers aren't versioned by default, so unless consumers opt-in to versioning, they'll track the latest code in the default branch
+
+### Closing thoughts
+
+- Generally, if you're reaching for layers because you want a consistent style, you should consider local layers + use a monorepo. 
+- If you're reaching for layers because you want loosely coupled components that are distributed between services, consider remote layers + a poly-repo approach
+  - You might also want to consider packages, but remote layers are likely much simpler
